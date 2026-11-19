@@ -29,6 +29,22 @@ Este repositório é a fonte para continuar o estudo em qualquer computador. Abr
 
 A tabela está na ordem de prioridade (peso de cada seção no guia de ago/2026).
 
+## Cenários reais (criados em 19/11/2026)
+
+Labs de cotidiano para treinar situações de trabalho. Detalhe e ordem em [cenarios/README.md](cenarios/README.md).
+
+| Cenário | Situação | Situação do lab |
+|---|---|---|
+| [C1](cenarios/cenario-01-api-ibge-municipios.md) | API REST do IBGE, JSON aninhado, Job semanal | Não iniciado |
+| [C2](cenarios/cenario-02-api-bcb-cambio-merge.md) | API do Banco Central, carga incremental, MERGE, auditoria | Não iniciado |
+| [C3](cenarios/cenario-03-streaming-eventos-pedidos.md) | Eventos em fluxo contínuo, duplicados e fora de ordem | Não iniciado |
+| [C4](cenarios/cenario-04-clima-quase-tempo-real.md) | Clima quase em tempo real, pipeline declarativo, thresholds | Não iniciado |
+| [C5](cenarios/cenario-05-incidente-schema-drift-compliance.md) | Incidente de schema, reprocesso, column mask e row filter | Não iniciado |
+
+## Para agentes de IA
+
+Qualquer agente que for conduzir os labs deve ler primeiro o [AGENTS.md](AGENTS.md).
+
 ## Conteúdo
 
 | Arquivo | Para que serve |
@@ -41,6 +57,8 @@ A tabela está na ordem de prioridade (peso de cada seção no guia de ago/2026)
 | [docs/05-erros-e-licoes.md](docs/05-erros-e-licoes.md) | Erros reais vistos nos labs e o conceito de prova que cada um treina |
 | [docs/06-plano-ate-a-prova.md](docs/06-plano-ate-a-prova.md) | Plano flexível até 29/11/2026 |
 | [PROMPT-RETOMADA.md](PROMPT-RETOMADA.md) | Prompt pronto para abrir um chat novo e continuar |
+| [AGENTS.md](AGENTS.md) | Guia completo para outro agente de IA conduzir os labs |
+| [cenarios/README.md](cenarios/README.md) | Índice dos 5 cenários reais |
 
 ## Regras do projeto
 

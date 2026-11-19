@@ -93,6 +93,28 @@ Visto no ambiente (Lab 1, 19/11/2026): a tabela nasce com `clusterByAuto: true`;
 | `bundle run` recebe a chave do recurso, não o nome final | testado em set/2026 | set/2026 |
 | A variável de target em CI é `DATABRICKS_BUNDLE_TARGET` (`DATABRICKS_BUNDLE_ENV` está deprecada) | docs.databricks.com/aws/en/dev-tools/ci-cd/github | set/2026 |
 
+## Arquivos em volumes e recuperação de jobs
+
+| Fato | Fonte | Conferido |
+|---|---|---|
+| Volumes aceitam leitura e escrita com Spark, pandas, SQL e Python comum (`os`, `open`) no caminho `/Volumes/<catalogo>/<schema>/<volume>/...` | learn.microsoft.com/azure/databricks/volumes/volume-files | 19/11/2026 |
+| A CLI exige `dbfs:/` antes do caminho do volume: `databricks fs cp arquivo dbfs:/Volumes/...` | mesma página e /dev-tools/cli/reference/fs-commands | 19/11/2026 |
+| Em notebook e no editor SQL, só `LIST` funciona para arquivos em volume; `PUT INTO`, `GET` e `REMOVE` só por conectores e drivers | learn.microsoft.com/azure/databricks/volumes/volume-files | 19/11/2026 |
+| Repair run reexecuta só as tarefas sem sucesso e as dependentes; só em job com 2 ou mais tarefas; cada tarefa reparada roda do início e não é idempotente por si | learn.microsoft.com/azure/databricks/jobs/repair-job-failures | 19/11/2026 |
+| A evolução de schema com Structured Streaming pressupõe job com retries para reiniciar o ambiente e seguir | learn.microsoft.com/azure/databricks/jobs/control-flow | 19/11/2026 |
+| `try_cast` devolve NULL quando o valor não converte, em vez de erro | learn.microsoft.com/azure/databricks/sql/language-manual/functions/try_cast | 19/11/2026 |
+
+## APIs externas usadas nos cenários
+
+| Fato | Fonte | Conferido |
+|---|---|---|
+| IBGE Localidades v1: `/estados/{UF}/municipios`; padrão hierárquico, `view=nivelado` deixa plano | servicodados.ibge.gov.br/api/docs/localidades | 24/10/2026 (skill ibge-apis-docs) |
+| IBGE Malhas v4: `/municipios/{id}/metadados` traz centroide, área e limítrofes | servicodados.ibge.gov.br/api/docs/malhas?versao=4 | 24/10/2026 |
+| IBGE: limites de taxa e termos de uso não publicados nas páginas lidas | mesmas páginas | 24/10/2026 |
+| BCB SGS: `api.bcb.gov.br/dados/serie/bcdata.sgs.{codigo}/dados?formato=json&dataInicial=dd/MM/aaaa&dataFinal=dd/MM/aaaa`; janela máxima de 10 anos; filtros obrigatórios desde 26/03/2025; `/ultimos/{N}` com N até 20 | dadosabertos.bcb.gov.br (recurso json do SGS) | 19/11/2026 |
+| BCB SGS: o formato da resposta (nomes dos campos) **não é publicado** na página do serviço | mesma página | 19/11/2026 |
+| Open-Meteo: `api.open-meteo.com/v1/forecast`; `current` aceita qualquer variável horária; resposta com `current.time` e `current.interval`; condição atual de modelo de 15 min; `timezone` padrão GMT; uso comercial exige `apikey`; limites de requisição não constam na página | open-meteo.com/en/docs | 19/11/2026 |
+
 ## Não confirmado (não afirmar)
 
 - Nota de corte da prova.

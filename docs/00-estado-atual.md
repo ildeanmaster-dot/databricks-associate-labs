@@ -8,6 +8,8 @@ Atualizado em **19/11/2026**. Prova: **29/11/2026**.
 - Lab 3 (transformação) iniciado. A parte 1 (perfil dos dados reais) foi entregue e **aguarda o resultado** das 3 células.
 - Faltam os Labs 3 (resto), 5, 8, 6, 7 e 4, nesta ordem de prioridade.
 - Ritmo: meio período por dia, 1 ou 2 labs por vez, sem calendário rígido.
+- 5 cenários reais criados em 19/11/2026 (`cenarios/`), todos não iniciados. Ordem sugerida em [cenarios/README.md](../cenarios/README.md); se o tempo apertar, fazer só C3 e C5.
+- Guia para outro agente de IA: [AGENTS.md](../AGENTS.md).
 
 ## Próximo passo exato
 
@@ -64,3 +66,4 @@ O schema exato de `demo_delta` não ficou registrado. Conferir com `SHOW TABLES 
 - 14/11/2026: prova remarcada para 29/11/2026; cadernos ganharam as lacunas do guia de ago/2026.
 - 15/11/2026: material para NotebookLM entregue (seções 1 a 7 do guia).
 - 19/11/2026: Labs 0, 1 e 2 executados; Lab 3 iniciado; esta documentação criada.
+- 19/11/2026 (tarde): 5 cenários reais e o AGENTS.md criados.

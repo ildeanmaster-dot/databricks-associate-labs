@@ -8,7 +8,8 @@ databricks-certificacao-data-engineer, databricks-eng-dados, databricks-performa
 databricks-lab-free-edition, databricks-caderno-estudos-simulados, lakeflow-pipelines-bundles).
 
 Leia o repositório GitHub ildeanmaster-dot/databricks-associate-labs, começando por
-docs/00-estado-atual.md e docs/01-regras-didaticas.md, e depois o arquivo do lab da vez em labs/.
+AGENTS.md, docs/00-estado-atual.md e docs/01-regras-didaticas.md, e depois o arquivo do lab
+da vez em labs/ ou do cenário da vez em cenarios/.
 
 Estou me preparando para a prova Databricks Data Engineer Associate em 29/11/2026.
 Tenho meio período disponível e faço 1 ou 2 labs por vez, sem calendário rígido.
